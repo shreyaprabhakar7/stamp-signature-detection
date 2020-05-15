@@ -1,6 +1,6 @@
-** AUGMENTAION **
+## AUGMENTAION 
 
-# The original annotated image set conatins - (1-1088 images).
+The original annotated image set conatins - (1-1088 images).
 
 then various augmentatios on these images were done:
   
@@ -13,7 +13,7 @@ then various augmentatios on these images were done:
   4. chaning the images to HLS form (to_hls.py) - (4354-5440 iages)
   
   
-  # Complete set of augmentated images (dataset) is present in - all_images.py
+  Complete set of augmentated images (dataset) is present in - all_images.py
   
   ALL the PASCAL_VOC format (XML files) are present in - pascal_voc_all.py
   
