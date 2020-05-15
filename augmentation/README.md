@@ -15,8 +15,8 @@ then various augmentatios on these images were done:
   
   Complete set of augmentated images (dataset) is present in - all_images.py
   
-  ALL the PASCAL_VOC format (XML files) are present in - pascal_voc_all.py
+  ALL the PASCAL_VOC format (XML files) are present in - output_all_ut.zip
   
-  ALL the YOLO_darknet (TXT files) are present in - yolo_darknet_all.py
+  ALL the YOLO_darknet (TXT files) are present in - output_all_ut_yolo.zip
   
   
