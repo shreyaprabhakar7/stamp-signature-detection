@@ -22,18 +22,15 @@ o The annotated images are saved in the PASCAL_VOC and YOLO_darnet format.
 
 More images for creating the base training dataset (>5000 images) were created by various image augmentation techniques. Those includes:
 
- 
-1.     Horizontal Flip
 
-2.     Rotation (by certain angles)
+1.     Converting to grayscale images ( to_gray.py )
 
-3.     Vertical Flip
+2.     Changing Brightness (to_change_bright.py)
 
-4.     Changing Brightness&contrast, etc.
+3.     Changing contrast (to_contrast.py)
 
-5.     Converting to grayscale images
+4.     Converting to HSL format (to_hls.py)
 
-6.     Converting to HSL format
 
 **STEP 4-**
 The validation dataset created is around 900-1000 images, collected from the source:
@@ -49,5 +46,11 @@ The complete annotated dataset can be found by the links below!!
 train dataset - https://drive.google.com/drive/folders/1r771FabcvkdrGgHrcv5tnrhOVKemks1L?usp=sharing
 
 test dataset - https://drive.google.com/drive/folders/1rRjk7QL3jxtzCrTua3gQkEqE68lXmTwE?usp=sharing
+
+
+
+
+
+
 
 
