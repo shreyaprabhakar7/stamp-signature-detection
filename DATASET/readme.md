@@ -49,6 +49,9 @@ test dataset - https://drive.google.com/open?id=1gx7ge-xINPGMFexqmztisj4DAR3-rnQ
 
 
 
+# SUGGESTION: Make a folder named images(in object_detection folder) that contains 2 folders train and test , both containing the respective image datasets aalong with their respective XML and if needed YOLO(.txt) annotated files.
+
+
 
 
 
