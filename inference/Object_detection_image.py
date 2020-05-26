@@ -1,5 +1,3 @@
-# print("shreya")
-
 import os
 import pathlib
 import cv2
@@ -15,9 +13,6 @@ sys.path.append("..")
 from utils import label_map_util
 from utils import visualization_utils as vis_util
 import pandas as pd
-# print("shreya")
-
-
 
 df_count = pd.DataFrame(columns=['filename','stamp','signature'])
 # Name of the directory containing the object detection module we're using
@@ -95,7 +90,6 @@ for imagename in TEST_IMAGE_PATHS:
         line_thickness=8,
         min_score_thresh=score_thresh)
     # All the results have been drawn on image. Now display the image.
-    # print("shreya")
     # print(np.squeeze(classes))
     # print("boxes")
     # print(np.squeeze(scores))
@@ -110,9 +104,9 @@ for imagename in TEST_IMAGE_PATHS:
     df_count.to_csv('object_counts.csv')
 
     imS = cv2.resize(image, (350,550))
-    # cv2.imshow('Object detector', imS)
-    # cv2.imshow("output", imS)
+    cv2.imshow('Object detector', imS)
+    cv2.imshow("output", imS)
     # Press any key to close the image
-    # cv2.waitKey(0)
+    cv2.waitKey(0)
     # Clean up
     cv2.destroyAllWindows()
