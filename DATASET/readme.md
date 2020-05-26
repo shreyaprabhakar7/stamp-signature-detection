@@ -23,13 +23,13 @@ o The annotated images are saved in the PASCAL_VOC and YOLO_darnet format.
 More images for creating the base training dataset (>5000 images) were created by various image augmentation techniques. Those includes:
 
 
-1.     Converting to grayscale images ( to_gray.py ) (image(1089)-image(2176))
+1.     Converting to grayscale images ( to_gray.py )
 
-2.     Changing Brightness (to_change_bright.py) (image(2177)-image(3265))
+2.     Changing Brightness (to_change_bright.py)
 
-3.     Changing contrast (to_contrast.py) (image(3266)-image(4353))
+3.     Changing contrast (to_contrast.py)
 
-4.     Converting to HSL format (to_hls.py) (image(4354)-image(5440))
+4.     Resizing the images(~(320 * 570))
 
 
 **STEP 4-**
