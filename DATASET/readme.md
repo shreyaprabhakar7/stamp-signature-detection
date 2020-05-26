@@ -41,11 +41,11 @@ The validation dataset created is around 900-1000 images, collected from the sou
 
 
 
-The complete annotated dataset can be found by the links below!!
+The complete annotated and augmented training dataset can be found by the links below!!
 
 train dataset - https://drive.google.com/open?id=1gWNaAab_oz9ooikHr2ABD5rQVwTgQgxB
 
-test dataset - https://drive.google.com/drive/folders/1rRjk7QL3jxtzCrTua3gQkEqE68lXmTwE?usp=sharing
+test dataset - https://drive.google.com/open?id=1gx7ge-xINPGMFexqmztisj4DAR3-rnQ2
 
 
 
