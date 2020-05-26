@@ -1,0 +1,20 @@
+To get the mAP evaluation at different IOUs of the trained model on training and validation dataset, use command :
+
+FOR VALIDATION SET:
+
+python eval.py \
+    --logtostderr \
+    --pipeline_config_path=training/model_name.config \
+    --checkpoint_dir=training/ \
+    --eval_dir=eval/
+    
+    
+FOR TARINING SET:
+
+- set the "eval_training_data" = True.
+
+python eval.py \
+    --logtostderr \
+    --pipeline_config_path=training/model_name.config \
+    --checkpoint_dir=training/ \
+    --eval_dir=eval/
