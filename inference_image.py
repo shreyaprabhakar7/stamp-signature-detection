@@ -1,4 +1,3 @@
-# print("shreya")
 
 import os
 import pathlib
@@ -6,7 +5,10 @@ import cv2
 import numpy as np
 import warnings
 import matplotlib.pyplot as plt
-%matplotlib inline
+# %matplotlib inline
+
+from pdf2image import convert_from_path
+from tqdm import tqdm
 
 # import glob
 
@@ -14,10 +16,63 @@ warnings.filterwarnings("ignore")
 import tensorflow as tf
 import sys
 
+from PIL import Image
+import shutil
+from os import listdir,makedirs
+from os.path import isfile,join
+
+
 # # This is needed since the notebook is stored in the object_detection folder.
 
-dir = r"/content/gdrive/My Drive/TensorFlow/models/research/object_detection/"
-os. chdir("/content/gdrive/My Drive/TensorFlow/models/research/object_detection/")
+
+
+pdf_dir = r"/content/gdrive/My Drive/tensorflow2/models/research/object_detection/images/test"
+os.chdir(pdf_dir)
+
+for pdf_file in tqdm(os.listdir(pdf_dir)):
+
+    if pdf_file.endswith(".pdf"):
+        pages = convert_from_path(pdf_file, 300)
+        pdf_file = pdf_file[:-4]
+        
+        for page in pages:
+
+            page.save("%s-page%d.png" % (pdf_file,pages.index(page)), "PNG")
+
+  
+
+
+directory = r'/content/gdrive/My Drive/tensorflow2/models/research/object_detection/images/test'
+
+for filename in tqdm(os.listdir(directory)):
+    if filename.endswith(".jpg"):
+        im = Image.open(join(directory,filename))
+        name = join(directory,filename[:-4])
+        im.save(name + '.png')
+        print(os.path.join(directory, filename))
+        continue
+    else:
+        continue
+    
+
+directory = r'/content/gdrive/My Drive/tensorflow2/models/research/object_detection/images/test'
+
+for filename in tqdm(os.listdir(directory)):
+    if filename.endswith(".tif"):
+        im = Image.open(join(directory,filename))
+        name = join(directory,filename[:-4])
+        im.save(name + '.png')
+        print(os.path.join(directory, filename))
+        continue
+    else:
+        continue
+    
+    
+    
+    
+
+dir = r"/content/gdrive/My Drive/tensorflow2/models/research/object_detection/"
+os. chdir("/content/gdrive/My Drive/tensorflow2/models/research/object_detection/")
 
 sys.path.append("..")
 
@@ -25,7 +80,7 @@ from utils import label_map_util
 from utils import visualization_utils as vis_util
 import pandas as pd
 
-# df_count = pd.DataFrame(columns=['filename','stamp','signature','ymin','xmin','ymax','xmax'])
+df_count = pd.DataFrame(columns=['filename','stamp','signature'])
 df_cord = pd.DataFrame(columns=['filename','class','xmin','ymin','xmax','ymax'])
 # # Name of the directory containing the object detection module we're using
 MODEL_NAME = 'inference_graph'
@@ -123,7 +178,7 @@ for imagename in TEST_IMAGE_PATHS:
         file_name = PATH_TO_IMAGE[PATH_TO_IMAGE.find('test')+5:]
         if str(int(label_dect)) == '2':
             class_set = "signature"
-            
+             
         else:
             class_set = "stamp"
             
@@ -159,9 +214,10 @@ for imagename in TEST_IMAGE_PATHS:
     df_count.to_csv('object_counts.csv')
 
     imS = cv2.resize(image, (350,550))
+    print(imS)
 #     # cv2.imshow('Object detector', imS)
-    plt.imshow("output", imS)
+    # cv2.imshow("output", imS)
 #     # Press any key to close the image
-#     cv2.waitKey(0)
+    # cv2.waitKey(0)
 # #     # Clean up
-#     cv2.destroyAllWindows()
+    # cv2.destroyAllWindows()
