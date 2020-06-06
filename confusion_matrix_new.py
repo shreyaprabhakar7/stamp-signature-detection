@@ -1,12 +1,13 @@
 import os
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
+from mlxtend.plotting import plot_confusion_matrix
 
 CWD_PATH = os.getcwd()
 
 import pandas
 colnames = ['filename', 'stamp', 'signature']
-data_pred = pandas.read_csv('object_counts.csv', names=colnames)
+data_pred = pandas.read_csv('object_counts.csv', names=colnames, header=0)
 
 data_actual = pandas.read_csv('csv_counts_validationset.csv', names=colnames)
 
