@@ -25,9 +25,9 @@ from os.path import isfile,join
 # # This is needed since the notebook is stored in the object_detection folder.
 
 
-
-pdf_dir = r"/content/gdrive/My Drive/tensorflow2/models/research/object_detection/images/test"
-pdf_dir = os.path.join(os.getcwd(), "./images/test")
+CWD = os.getcwd()
+# pdf_dir = r"/content/gdrive/My Drive/tensorflow2/models/research/object_detection/images/test"
+pdf_dir = os.path.join(CWD, "images/test")
 os.chdir(pdf_dir)
 
 for pdf_file in tqdm(os.listdir(pdf_dir)):
@@ -43,7 +43,7 @@ for pdf_file in tqdm(os.listdir(pdf_dir)):
   
 
 
-directory = os.path.join(os.getcwd(), "./images/test")
+directory = os.path.join(CWD, "images/test")
 
 for filename in tqdm(os.listdir(directory)):
     if filename.endswith(".jpg"):
@@ -56,7 +56,7 @@ for filename in tqdm(os.listdir(directory)):
         continue
     
 
-directory = os.path.join(os.getcwd(), "./images/test")
+directory = os.path.join(CWD, "images/test")
 
 for filename in tqdm(os.listdir(directory)):
     if filename.endswith(".tif"):
@@ -72,8 +72,8 @@ for filename in tqdm(os.listdir(directory)):
     
     
 
-dir = os.getcwd()
-os. chdir(dir)
+# dir = os.getcwd()
+os. chdir(CWD)
 
 sys.path.append("..")
 
@@ -86,7 +86,7 @@ df_cord = pd.DataFrame(columns=['filename','class','xmin','ymin','xmax','ymax'])
 # # Name of the directory containing the object detection module we're using
 MODEL_NAME = 'inference_graph'
 
-PATH_TO_TEST_IMAGES_DIR = pathlib.Path(os.path.join(os.getcwd(),'images/test/'))
+PATH_TO_TEST_IMAGES_DIR = pathlib.Path(os.path.join(CWD,'images/test/'))
 TEST_IMAGE_PATHS = sorted(list(PATH_TO_TEST_IMAGES_DIR.glob("*.png")))
 
 CWD_PATH = os.getcwd()
