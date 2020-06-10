@@ -27,7 +27,7 @@ from os.path import isfile,join
 
 
 pdf_dir = r"/content/gdrive/My Drive/tensorflow2/models/research/object_detection/images/test"
-pdf_dir = os.path.join(os.getcwd(), "../../images/test")
+pdf_dir = os.path.join(os.getcwd(), "./images/test")
 os.chdir(pdf_dir)
 
 for pdf_file in tqdm(os.listdir(pdf_dir)):
@@ -43,7 +43,7 @@ for pdf_file in tqdm(os.listdir(pdf_dir)):
   
 
 
-directory = os.path.join(os.getcwd(), "../../images/test")
+directory = os.path.join(os.getcwd(), "./images/test")
 
 for filename in tqdm(os.listdir(directory)):
     if filename.endswith(".jpg"):
@@ -56,7 +56,7 @@ for filename in tqdm(os.listdir(directory)):
         continue
     
 
-directory = os.path.join(os.getcwd(), "../../images/test")
+directory = os.path.join(os.getcwd(), "./images/test")
 
 for filename in tqdm(os.listdir(directory)):
     if filename.endswith(".tif"):
