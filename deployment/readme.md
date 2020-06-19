@@ -9,4 +9,7 @@ to run the script, use command :
 !python inference_image1.py --input_folder=images/test               (or any other folder)
 
 
-NOTE : The frozen_graph can be found in infernce_graph folder once the training and exporting generated inference graph is done. 
+NOTE : The frozen_graph can be found in infernce_graph folder once the training and exporting generated inference graph is done.
+Otherwise use this:
+
+https://drive.google.com/drive/folders/1kT5X29DuihflcEqlaKAps66b90XaipvV?usp=sharing
