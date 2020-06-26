@@ -13,3 +13,6 @@ NOTE : The frozen_graph can be found in infernce_graph folder once the training 
 Otherwise use this:
 
 https://drive.google.com/drive/folders/1kT5X29DuihflcEqlaKAps66b90XaipvV?usp=sharing
+
+present in inference_graph folder :
+https://drive.google.com/drive/folders/1kT5X29DuihflcEqlaKAps66b90XaipvV?usp=sharing
